@@ -1,0 +1,221 @@
+1. Variables & Data Types
+Variable Assignment
+x = int(5)
+y = float(5.4)
+z = string("hello")
+
+= assigns a value to a variable
+
+Variables are dynamically typed
+
+Type Casting
+int(value)
+float(value)
+string(value)
+
+
+int and float convert values unless impossible
+
+string() always succeeds
+
+2. Arrays (Lists)
+Array Creation
+array = [e0, e1, e2, e3]
+
+Arrays are ordered
+
+Arrays can mix data types
+
+Arrays can contain other arrays
+
+Indexing
+array[0]
+array[-1]   # last element
+
+Array Modification
+add(array, element)      # append
+remove(array, element)   # pop / remove
+
+3. Dictionaries (Maps)
+Dictionary Creation
+dic = {
+  "key": value,
+  "key2": value2
+}
+
+Access
+dic.value(key)        # value by key
+dic.key(value)    # key by value
+
+
+dic.value(key) returns the matching value of a key
+dic.key(value) returns the matching key of a value
+
+
+4. Operators
+Arithmetic
++   addition
+-   subtraction
+*   multiplication
+%   modulus
+
+Comparison
+<   less than
+>   greater than
+==  equal
+
+Assignment
+=
+
+5. Boolean Values & Logic
+true
+false
+
+Logical Operators
+AND
+OR
+NOT
+
+XOR Gate
+XOR{
+    condition1
+    condition2
+}
+
+XOR{1;2}
+
+you can either write seperate conditions or call 2 functions
+
+6. Control Flow
+If Statements
+if condition{
+    code
+}
+
+if condition{
+    code
+}else{
+    code
+}
+
+if condition AND otherCondition{ code }
+if condition OR otherCondition{ code }
+if NOT condition{ code }
+
+7. Loops
+Fixed Iteration Loop
+loop iters{
+    code
+}
+
+While Loop
+loop while(condition){
+    code
+}
+
+Loop Through Array
+loop through(array){
+    code
+}
+
+Iteration Counter (iterval)
+loop iters.iterval(i){
+    print(i)
+}
+
+
+iterval tracks the current iteration
+
+If looping through an array, i equals the element
+
+If looping n times, i = 1..n
+
+8. Functions
+Function Definition (No Parameters)
+//myFunction{
+    code
+}
+
+Function Definition (With Parameters)
+//myFunction takes(a, b){
+    code
+    out(result)
+}
+
+
+out(value) returns a value
+
+Function Call
+/myFunction
+/myFunction(x, y)
+
+result = /myFunction
+
+9. Built-In Functions
+Output
+print("text", int, float, list)
+
+Accepts any data type
+concatenation is done with commas between variables and can concatenate data types together
+Auto converts to string
+
+Array & String Utilities
+reverse(array)
+sort(array)
+split(string, "separator")
+replace(string, "old", "new")
+charList(string)
+
+Math Utilities
+is_prime(n)
+
+10. Comments
+# this is a comment
+
+
+
+11.Examples
+# fibonacci sequence calculator
+# this program prints the fibonacci sequence up to a given limit
+
+# initialize the first two numbers in the sequence
+firstNumb = int(1)
+secondNumb = int(1)
+
+# variable used to store the sum of the previous two numbers
+summed = int(0)
+
+# number of iterations requested
+n = int(42)
+
+# fibonacci function
+//fib.takes(limit){
+
+    # prevent very large inputs (design choice / safety check)
+    if limit > 40{
+        print("choose a samller number, because I say so")
+
+    }else{
+
+        # loop 'limit' times and keep track of the iteration number in 'i'
+        loop limit.iterval(i){
+
+            # calculate the next fibonacci number
+            summed = firstNumb + secondNumb
+
+            # shift values forward in the sequence
+            firstNumb = secondNumb;
+            secondNumb = summed
+            
+            # print the current iteration number
+            print(i, "th iteration")
+
+            # print the fibonacci value at this step
+            print(summed)
+        }
+    }
+
+}
+
+# call the fibonacci function with n as the limit
+/fib(n)
